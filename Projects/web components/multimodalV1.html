@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .iframe-cont {
+            width: 100%;
+            height: -webkit-fill-available;
+        }
+
+        iframe {
+            width: -webkit-fill-available;
+            height: -webkit-fill-available;
+
+        }
+
+        .cards {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-gap: 1rem;
+        }
+
+        .card {
+            border: 1.5px solid #eceaea;
+            background-color: #fff;
+            box-shadow: 0 3px 0 #eceaea;
+            border-radius: 16px;
+            padding: 20px 15px;
+
+
+
+        }
+
+        .card .title {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: #01202b;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 14px;
+            line-height: 22px;
+            min-height: 50px;
+            color: #51626a;
+            margin-bottom: 1px;
+        }
+
+        .card .btn {
+            padding: 5px;
+            width: fit-content;
+            border-radius: 5px;
+            --tw-text-opacity: 1;
+            color: rgba(255, 255, 255, var(--tw-text-opacity));
+            background: #0a2a66;
+            font-size: 16px;
+            box-shadow: 0 3px 0 #01202b;
+            border: 1px solid transparent;
+        }
+
+
+        @media (min-width: 100px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (min-width: 600px) {
+            .cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+
+
+        @media (min-width: 900px) {
+            .cards {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 100;
+            /* Sit on top */
+            padding: 10px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 95%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+        }
+
+        /* The Close Button */
+        .closes {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .closes:hover,
+        .closes:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
+
+
+
+    <h2>Collection of notes</h2>
+    <p>Recommended to view on large screens</p>
+    <div class="cards">
+        <div class="card">
+            <h3 class="title">Complete HansdWritten Note</h3>
+            <p>BE-Software Logic Circuits ELX 212</p>
+            <div id="myBtn" class="myBtn btn">Read Notes</div>
+        </div>
+
+        <div class="modal">
+            <!-- Modal content -->
+            <div class="modal-content"><span class="closes">X</span>
+                <div class="iframe-cont">
+                    It is displayed
+                    <iframe
+                    src="https://padandas.com/generic/web/viewer_readonly.html?file=./generic/IntroNumberSystemandCodesHandWrite0126ee.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+   <script src="./multimodalv1.js"></script>
+
+</body>
+
+
+</html>

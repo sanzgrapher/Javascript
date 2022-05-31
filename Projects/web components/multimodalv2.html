@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ////////////////////////////////////////// style for modal ////////////////////////////////////////// */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            /* padding: 8px; */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            /* overflow: auto; */
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-window {
+            background-color: #fefefe;
+            /* margin: 3px; */
+            /* padding: 4px; */
+            /* border: 1px solid #888; */
+            width: -webkit-fill-available;
+            height: -webkit-fill-available;
+        }
+
+
+
+        .close-x {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            color: #fff;
+            height: 40x;
+            width: 40px;
+            font-size: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #f90707;
+            border-radius: 25px;
+            opacity: 85%;
+        }
+
+        .close-x:hover,
+        .close-x:focus {
+            color: #f6f6f6;
+            cursor: pointer;
+            background-color: #1865f2;
+        }
+
+        .open {
+            display: block;
+        }
+
+        .iframe-cont {
+            width: 100%;
+            height: -webkit-fill-available;
+        }
+
+        iframe {
+            width: -webkit-fill-available;
+            height: -webkit-fill-available;
+
+        }
+
+        .cards-d {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-gap: 1rem;
+        }
+
+        .card-item {
+            border: 1.5px solid #eceaea;
+            background-color: #fff;
+            box-shadow: 0 3px 0 #eceaea;
+            border-radius: 16px;
+            padding: 20px 15px;
+
+
+
+        }
+
+        .card-item .title {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: #01202b;
+            margin-bottom: 8px;
+        }
+
+        .card-item p {
+            font-size: 14px;
+            line-height: 22px;
+            min-height: 50px;
+            color: #51626a;
+            margin-bottom: 1px;
+        }
+
+        .card-item .btn {
+            padding: 5px;
+            width: fit-content;
+            border-radius: 5px;
+            --tw-text-opacity: 1;
+            color: rgba(255, 255, 255, var(--tw-text-opacity));
+            background: #0a2a66;
+            font-size: 16px;
+            box-shadow: 0 3px 0 #01202b;
+            border: 1px solid transparent;
+        }
+
+
+        @media (min-width: 100px) {
+            .cards-d {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Screen larger than 600px? 2 column */
+        @media (min-width: 600px) {
+            .cards-d {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+
+        /* Screen larger than 900px? 3 columns */
+        @media (min-width: 900px) {
+            .cards-d {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* ////////////////////////////////////////// style for modal ends ////////////////////////////////////////// */
+    </style>
+</head>
+
+<body>
+    <h2>Collection of notes</h2>
+    <p>Recommended to view on large screens</p>
+    <div class="cards-d">
+        <div class="card-item">
+            <h3 class="title">Complete HandWritten Note</h3>
+            <p>BE-Software Logic Circuits ELX 212</p>
+            <button id="myBtn" class="myBtn btn" data-target="LogicCircuitsHandwrittenNotesComplete"
+                data-toggle="modal">Read Notes</button>
+        </div>
+        <div id="LogicCircuitsHandwrittenNotesComplete" class="modal">
+            <div class="modal-window small">
+                <span class="close-x" data-dismiss="modal">&times;</span>
+                <div class="iframe-cont">
+                    shown <iframe
+                        src="https://padandas.com/generic/web/viewer_readonly.html?file=./generic/LogicCircuitsHandwrittenNotesComplete.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="card-item">
+            <h3 class="title">Intro and Number System and Codes</h3>
+            <p>BE-Software Logic Circuits ELX 212</p>
+            <button id="myBtn" class="myBtn btn" data-target="IntroNumberSystemandCodesHandWrite0126ee"
+                data-toggle="modal">Read Notes</button>
+        </div>
+        <div id="IntroNumberSystemandCodesHandWrite0126ee" class="modal">
+            <div class="modal-window small">
+                <span class="close-x" data-dismiss="modal">&times;</span>
+                <div class="iframe-cont"><iframe
+                        src="../../../generic/web/viewer_readonly.html?file=./generic/IntroNumberSystemandCodesHandWrite0126ee.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="card-item">
+            <h3 class="title">Boolean Algebra</h3>
+            <p>BE-Software Logic Circuits ELX 212</p>
+            <button id="myBtn" class="myBtn btn" data-target="BooleanfunHandWrite0126ee" data-toggle="modal">Read
+                Notes</button>
+        </div>
+        <div id="BooleanfunHandWrite0126ee" class="modal">
+            <div class="modal-window small">
+                <span class="close-x" data-dismiss="modal">&times;</span>
+                <div class="iframe-cont"><iframe
+                        src="../../../generic/web/viewer_readonly.html?file=./generic/BooleanfunHandWrite0126ee.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+
+            <script src="./multimodalv2.js"></script>
+</body>
+
+</html>
